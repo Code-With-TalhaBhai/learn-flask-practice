@@ -1,0 +1,15 @@
+{% extends "min_layout.html" %}
+
+{% block min_layout %}
+
+<h2>Books</h2>
+
+{% for movie in movies %}
+    <form action="/shop" method="post">
+        <h3>{{movie['title']}}</h3>
+        <input type="hidden" name="movie_id" value="{{movie['id']}}">
+        <button type="submit">Add To Cart</button>
+    </form>
+    {% endfor %}
+
+{% endblock %}

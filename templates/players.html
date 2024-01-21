@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+    <ul>
+    {% for athelete in players %}
+         <!-- For List -->
+        <!-- <li>{{athelete}}: {{players[athelete]}}</li> -->
+        <!-- For DB -->
+            <!-- <li>{{athelete['name']}}: {{athelete['sport']}}</li> -->
+            <li>{{athelete['name']}}: {{athelete['sport']}}</li>
+            <form action="/players" method="post">
+                <input type="hidden" name="degenerate" value="{{athelete['id']}}">
+                <button type="submit">Degenerate</button>
+            </form>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
+<!-- <body/>
+<html/> -->

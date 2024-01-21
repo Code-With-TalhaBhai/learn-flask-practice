@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+
+{% block header %}
+    <h1>Sports Information Form</h1>
+
+    <form action="/sportform" method="post">
+
+        <label for="Name"></label>
+        <input type="text" name="name" placeholder="Your Name"/>
+        <br/>
+
+        <label for="sport">Select a Sport:</label>
+        <select id="sport" name="sport" required>
+            <option value="football">Football</option>
+            <option value="soccer">Soccer</option>
+            <option value="basketball">Basketball</option>
+            <option value="baseball">Baseball</option>
+            <option value="tennis">Tennis</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

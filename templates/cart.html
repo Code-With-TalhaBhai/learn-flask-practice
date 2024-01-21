@@ -1,0 +1,14 @@
+{% extends "min_layout.html" %}
+
+{% block min_layout %}
+
+<!-- {% set count = 0 %} Defining variable in jinja template -->
+    {% set cnt = 1 %}
+    {% for items in cart %}
+        <h3>{{cnt}}. {{items}}</h3>
+        {% set cnt = cnt + 1 %}
+    {% endfor %}
+
+    <button><a href="/shop">Continue Shopping</a></button>
+
+{% endblock %}
